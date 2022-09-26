@@ -1,5 +1,7 @@
 # Algoritmo de cifrado simétrico por sustitución monoalfabeto
 
+# Sintaxis de ejecución: python3 .\monoalfabeto.py .\textos\<texto>
+
 import sys
 
 texto = open(sys.argv[1])  # seleccionamos el archivo .txt
