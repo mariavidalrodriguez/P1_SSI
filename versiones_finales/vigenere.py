@@ -6,10 +6,11 @@ from itertools import cycle
 
 alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-texto = open(sys.argv[1])  # seleccionamos el archivo .txt
+texto = open(sys.argv[1])
 contenido = texto.read()
 
-for n in contenido: # Comprobamos que solo hay caracteres válidos en el texto introducido
+# Comprobamos que solo hay caracteres válidos en el texto introducido
+for n in contenido:
     if (ord(n) < 65) or (ord(n) > 90):
         print("El mensaje introducido contiene caracteres no permitidos: ABCDEFGHIJKLMNOPQRSTUVWXYZ ")
         break
@@ -22,14 +23,15 @@ accion = input("Seleccione la acción a realizar: 1) Cifrar 2) Descifrar\n")
 
 k = input("Introduce la palabra clave: ")
 
-for n in k: # Comprobamos que solo hay caracteres válidos en la clave introducida
+# Comprobamos que solo hay caracteres válidos en la clave introducida
+for n in k:
     if (ord(n) < 65) or (ord(n) > 90):
         print("El mensaje introducido contiene caracteres no permitidos: ABCDEFGHIJKLMNOPQRSTUVWXYZ ")
         break
 
 # Conseguimos los desplazamientos que vamos a usar para las distintas letras de la clave
 
-despCesar=[]
+despCesar = []
 for c in k:
     despCesar += [alfabeto.index(c)]
 print(despCesar)
@@ -47,5 +49,3 @@ elif accion == "2":
     print(resultado)
 else:
     print("La opción elegida no es válida\n")
-
-
