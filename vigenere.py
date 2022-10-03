@@ -30,6 +30,7 @@ list_descif = cycle(despCesar)
 
 # cycle -> recibe un argumento y el resultado es la repetición de este indefinidamente
 # -> Ej: cycle('ABCD') --> A B C D A B C D ...
+# https://docs.python.org/es/dev/library/itertools.html
 
 # Cifrado
 cifrad = ""
@@ -47,4 +48,5 @@ for c in cifrad:
     if c in alfabeto:
         descif += alfabeto[(alfabeto.index(c) - list_descif.__next__()) % (len(alfabeto))]
 
+print("\n")
 print(descif)
