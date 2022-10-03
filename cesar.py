@@ -1,22 +1,22 @@
 # Introducimos el texto a cifrar
 texto=input("Introduzca el texto a cifrar: ")
 
-#Creamos la cadena de caracteres
+# Creamos la cadena de caracteres
 if texto==texto.upper():
     alf="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 else:
     alf="abcdefghijklmnopqrstuvwxtz"
 
-#Definimos el valor del desplazamiento
+# Definimos el valor del desplazamiento
 k=int(input("Valor de desplazamiento: "))
 
-#Creamos la cadena donde almacenará el texto cifrado
+# Creamos la cadena donde almacenará el texto cifrado
 cifrad=""
 
-#Cifrado
+# Cifrado
 for c in texto:
     if c in alf:
-        cifrad += alf[(alf.index(c)+k)%(len(alf))]
+        cifrad += alf[(alf.index(c) + k) % (len(alf))]
     else:
         cifrad +=c
 
